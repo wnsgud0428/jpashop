@@ -15,8 +15,8 @@ public class OrderItem {
     @Column(name = "order_item_id")
     private Long id;
 
-
-    //todo: item 엔티티 만들어서 연관관계 설정
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "item_id")
     private Item item;
 
     @ManyToOne(fetch = FetchType.LAZY)
