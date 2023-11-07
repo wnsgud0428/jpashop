@@ -1,6 +1,7 @@
 package jpabook.jpashop.repository;
 
 import jpabook.jpashop.domain.Order;
+import jpabook.jpashop.domain.OrderSearch;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
 
@@ -22,5 +23,10 @@ public class OrderRepository {
     }
 
     // todo: 검색기능
-//    public List<Order> findAll(OrderSearch orderSearch) {}
+    public List<Order> findAllByString(OrderSearch orderSearch) {
+
+    }
+    public List<Order> findAllByCriteria(OrderSearch orderSearch) {
+
+    }
 }
