@@ -66,7 +66,4 @@ public class OrderRepository {
 
     }
 
-    public List<Order> findAllByCriteria(OrderSearch orderSearch) {
-        // 실무에서는 복잡해서 사용하지 않음 -> Querydsl 사용!
-    }
 }
