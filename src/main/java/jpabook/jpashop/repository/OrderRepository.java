@@ -62,7 +62,7 @@ public class OrderRepository {
             query = query.setParameter("name", orderSearch.getMemberName());
         }
 
-            return query.getResultList();
+        return query.getResultList();
 
     }
 
