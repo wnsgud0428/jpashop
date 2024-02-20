@@ -23,7 +23,12 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'org.springframework.boot:spring-boot-devtools'
+
+
 	implementation("com.github.gavlyukovskiy:p6spy-spring-boot-starter:1.8.1")
+	implementation 'org.springframework.boot:spring-boot-starter-validation' // @Valid 사용
+	implementation 'com.fasterxml.jackson.datatype:jackson-datatype-hibernate5' // 버전을 생략해도 스프링부트가 적절한 버전을 자동적으로 들고옴
+
 	compileOnly 'org.projectlombok:lombok'
 	runtimeOnly 'com.h2database:h2'
 	annotationProcessor 'org.projectlombok:lombok'
@@ -31,7 +36,7 @@ dependencies {
 	testImplementation("org.junit.vintage:junit-vintage-engine") {
 		exclude group: "org.hamcrest", module: "harcrest-core"
 	}
-	implementation 'org.springframework.boot:spring-boot-starter-validation'
+
 }
 
 tasks.named('test') {
