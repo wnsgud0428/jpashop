@@ -14,7 +14,7 @@ public class Delivery {
     @Column(name = "delivery_id")
     private Long id;
 
-    @JsonIgnore
+    @JsonIgnore // 양방향 관계 이므로 JsonIgnore 설정!
     @OneToOne(mappedBy = "delivery", fetch = FetchType.LAZY)
     private Order order;
 
