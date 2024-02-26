@@ -56,6 +56,11 @@ public class OrderApiController {
         return results;
     }
 
+    /**
+     * V3.1 엔티티를 조회해서 DTO로 변환(페이징 고려)
+     * - ToOne 관계만 우선 모두 페치 조인으로 최적화
+     * - 컬렉션 관계는 hibernate.default_batch_fetch_size, @BatchSize로 최적화
+     */
     @GetMapping("/api/v3.1/orders")
     public List<OrderDto> orderV3_page(
             @RequestParam(value = "offset", defaultValue = "0") int offset,
