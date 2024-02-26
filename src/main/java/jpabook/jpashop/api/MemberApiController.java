@@ -4,7 +4,6 @@ import jpabook.jpashop.domain.Member;
 import jpabook.jpashop.service.MemberService;
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
@@ -39,7 +38,7 @@ public class MemberApiController {
             @PathVariable("id") Long id,
             @RequestBody @Valid UpdateMemberRequest request) {
         memberService.update(id, request.getName());
-        Member findMember = memberService.findOne(id);
+        Member findMember = memberService.findById(id);
         return new UpdateMemberResponse(findMember.getId(), findMember.getName());
     }
 
